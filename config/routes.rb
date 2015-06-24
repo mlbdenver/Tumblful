@@ -12,6 +12,7 @@ Tumblful::Application.routes.draw do
   root :to => 'home#index'
   
   resources :image_links
+  resources :text_posts
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
