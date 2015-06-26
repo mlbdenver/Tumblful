@@ -1,6 +1,6 @@
 class TextPostsController < ApplicationController
   def index
-    @text_posts = TextPost.all
+    @text_post = TextPost.all
   end
   
   # text_posts GET  /text_posts/:id(.:format) text_posts#show
