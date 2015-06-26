@@ -20,7 +20,7 @@ class ImageLinksController < ApplicationController
   
   # POST /image_links(.:format) image_links#create
   def create
-    @image_link = ImageLink.new(url: params[:image_link][:url], image_link_params)
+    @image_link = ImageLink.new(image_link_params)
     if @image_link.save
       redirect_to image_links_path
     else

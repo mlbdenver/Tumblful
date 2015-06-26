@@ -20,7 +20,7 @@ class TextPostsController < ApplicationController
   
   # POST /text_posts(.:format) text_posts#create
   def create
-    @text_post = TextPost.new(url: params[:image_link][:url], text_post_params)
+    @text_post = TextPost.new(text_post_params)
     if @text_post.save
       redirect_to text_posts_path
     else
@@ -49,6 +49,6 @@ class TextPostsController < ApplicationController
   
   private
   def text_post_params
-    params.require(:image_link).permit(:url, :title)
+    params.require(:text_post).permit(:post)
   end
 end
