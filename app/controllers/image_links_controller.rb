@@ -10,7 +10,7 @@ class ImageLinksController < ApplicationController
   
   # new_image_link GET  /image_links/new(.:format) image_links#new
   def new
-
+    @image_link = ImageLink.new
   end
   
   # edit_image_link GET  /image_links/:id/edit(.:format) image_links#edit

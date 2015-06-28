@@ -1,6 +1,6 @@
 class TextPostsController < ApplicationController
   def index
-    @text_post = TextPost.all
+    @text_posts = TextPost.all
   end
   
   # text_posts GET  /text_posts/:id(.:format) text_posts#show
@@ -10,7 +10,7 @@ class TextPostsController < ApplicationController
   
   # new_text_post GET  /text_posts/new(.:format) text_posts#new
   def new
-
+    @text_post = TextPost.new
   end
   
   # edit_text_post GET  /text_posts/:id/edit(.:format) text_posts#edit

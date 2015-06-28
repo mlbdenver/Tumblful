@@ -1,10 +1,11 @@
 <div>
-  <% @text_post.each do |textpost| %>
+  <% @text_posts.each do |textpost| %>
     <%= div_for textpost do %>
-      ..............
-      ..............
       <p>
-        <%= link_to "Show", text_post_path(textpost) %> |
+        <%= textpost.post %>
+      </p>
+      <p>
+        <%= link_to "Show", text_post_path(textpost) %>
       </p>
     <% end %>
   <% end %>
